@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giải phương trình bậc 2: Ax<sup>2</sup> + Bx + C = 0</h1>
+    <h2 style="display: inline; vertical-align: middle;">A = </h2><input type="text" id="A" style="height: 20px; width: 3%; margin-right: 10px;"><span id="0" style="color: red; font-style: italic; font-weight: bold;"></span>
+    <br><br>
+    <h2 style="display: inline; vertical-align: middle;">B = </h2><input type="text" id="B" style="height: 20px; width: 3%; margin-right: 10px;"><span id="1" style="color: red; font-style: italic; font-weight: bold;"></span>
+    <br><br>
+    <h2 style="display: inline; vertical-align: middle;">C = </h2><input type="text" id="C" style="height: 20px; width: 3%; margin-right: 10px;"><span id="2" style="color: red; font-style: italic; font-weight: bold;"></span>
+    <br><br>
+    <button type="button" onclick="solver()">Giải phương trình</button>
+    <br><br>
+    <hr>
+    <h1>Giải</h1>
+    Delta = <b><span id="delta"></span></b>
+    <p id="desc"></p>
+    x<sub>1</sub> = <b><span id="x1"></span></b><br>
+    x<sub>2</sub> = <b><span id="x2"></b></span>
+</body>
+    <script>
+        function solver(){
+            for(let i=0; i<=2; i++){
+                document.getElementById(String(i)).innerHTML = "";
+            }
+            document.getElementById("delta").innerHTML = "";
+            document.getElementById("desc").innerHTML = "";
+            document.getElementById("x1").innerHTML = "";
+            document.getElementById("x2").innerHTML = "";
+            var a = parseFloat(document.getElementById("A").value);
+            var flag = false;
+            if(a != 0){
+                var b = parseFloat(document.getElementById("B").value);
+                var c = parseFloat(document.getElementById("C").value);
+                const numCheck = [a, b, c];
+                for(let i=0; i<=2; i++){
+                    if(isNaN(numCheck[i])){
+                        document.getElementById(String(i)).innerHTML = "Phải là số!";
+                        flag = true
+                    }
+                }
+                if(flag == false){
+                    var delta = parseFloat(Math.pow(b,2) - 4 * a * c).toFixed(2);
+                    if(delta == 0){
+                        document.getElementById("delta").innerHTML = delta+", = 0";
+                        document.getElementById("desc").innerHTML = "Phương trình có nghiệm kép";
+                        let x = parseFloat(-b/2*a).toFixed(2)
+                        document.getElementById("x1").innerHTML = x;
+                        document.getElementById("x2").innerHTML = x;
+                    }
+                    else if(delta > 0){
+                        document.getElementById("delta").innerHTML = delta+", > 0";
+                        document.getElementById("desc").innerHTML = "Phương trình có 2 nghiệm phân biệt";
+                        let x1 = parseFloat((-b+Math.sqrt(delta))/2*a).toFixed(2)
+                        let x2 = parseFloat((-b-Math.sqrt(delta))/2*a).toFixed(2)
+                        document.getElementById("x1").innerHTML = x1;
+                        document.getElementById("x2").innerHTML = x2;
+                    }
+                    else{
+                        document.getElementById("delta").innerHTML = delta+", < 0";
+                        document.getElementById("desc").innerHTML = "Phương trình vô nghiệm";
+                    }
+                }
+            }
+            else{
+                document.getElementById("0").innerHTML = "A phải khác 0!";
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popin', 'sans-serif';
+}
+
+html, body{
+    background-image: url('https://moewalls.com/wp-content/uploads/2021/11/arona-in-classroom-blue-archive-thumb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+}
+
+.activehover:hover{
+    background-color: rgb(242, 224, 253);
+    border-radius: 10px 10px 0px 0px;
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+nav ul li{
+    position: relative;
+    float: left;
+    list-style: none;
+    width: 150px;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: rgba(2, 3, 12, 0.815);
+    text-decoration: underline;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 7px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover {
+    color: rgba(214, 245, 255, 0.815);
+    background-color: rgb(114, 210, 255);
+    border-radius: 10px;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: auto;
+    width: 150px;
+    background-color: rgb(242, 224, 253);
+    display: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+nav ul li ul li {
+    width: 100%;
+}
+
+nav ul li ul li a {
+    text-decoration: none;
+}
+
+nav ul li:hover > div ul {
+    display: initial;
+}
+
+.SearchBar {
+    width: 600px;
+    padding: 10px 15px;
+    background-color: aqua;
+    border-radius: 50px;
+    margin: auto;
+    
+}
+
+.searchform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;;
+}
+
+#searchevent {
+    width: 100%;
+    display: flex;
+}
+
+.SearchInput {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline-width: 0;
+    font-size: 20px;
+}
+
+.centerbox {
+    padding: 10px;
+    align-items: center;
+}
+
+.box2 {
+    display: flex;
+    
+    
+    height: auto;
+    width: 1500px;
+    margin: auto;
+    background-color: rgba(254, 255, 255, 0.7);
+    border-radius: 20px;
+    
+}
+
+
+
+.boxnews h1 {
+    font-size: 50px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.boxnews {
+    width: 100%;
+}
+
+.boxnews .ongoing table {
+    table-layout: auto;
+    width: 100%;
+    
+}
+
+.boxnews .ongoing table tr td img {
+    height: 300px;
+    width: 600px;
+    margin: auto;
+    display: block;
+}
+
+.boxnews .ongoing table tr td  a{
+    
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    
+} 
+
+.boxnews a:hover{
+    background-color: rgb(114, 210, 255);
+}
+
+.boxnews .upcoming table {
+    table-layout: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.boxnews .upcoming table tr td img {
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
+.boxnews .upcoming table tr td a {
+    font-size: 25px;
+    text-align: center;
+    display: block;
+} 
+
+.boxnews .pastevent table {
+    table-layout: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.boxnews .pastevent table tr td img {
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
+.boxnews .pastevent table tr td a {
+    font-size: 25px;
+    text-align: center;
+    display: block;
+} 
+
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 0.4px solid black;
+}
+
+.boxother {
+    display: flex;
+    align-self:flex-start;
+    justify-content: center;
+    padding: 10px;
+    width: 400px;
+    flex-wrap: wrap;
+    
+}
+
+/* .boxother p {
+    display: block;
+    margin: auto;
+    
+}  */
+
+.editbox {
+    display: flex;
+    justify-self: center;
+    padding-bottom: 10px;
+}
+
+.addbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editbutton {
+    background-color:rgba(154, 248, 252);
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 3px;
+    width: 260px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.addbutton {
+    background-color:rgba(154, 248, 252);
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 3px;
+    width: 260px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.addbuttonform {
+    background-color:rgba(154, 248, 252);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.cancelbutton {
+    background-color:rgb(223, 109, 57);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+.searchbutton {
+    background-color:rgba(154, 248, 252);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.editbutton:hover {
+    background-color:rgb(228, 200, 255);
+}
+
+.addbutton:hover {
+    background-color:rgb(228, 200, 255);
+}
+
+.addbuttonform:hover {
+    background-color:rgb(228, 200, 255);
+}
+
+.cancelbutton:hover {
+    background-color:rgb(255, 88, 58);
+}
+
+.othersources {
+    display: block;
+    padding-top: 20px;
+}
+
+.othersources img {
+    height: 50px;
+    width: 50px;
+    margin: 23px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.othersources img:hover {
+    transform: scale(1.5);
+}
+
+.othersources a {
+    background-color: none;
+}
+
+.addform {
+    table-layout: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.addform .left {
+    text-align: right;
+    float: right;
+    font-size: 25px;
+}
+
+.addform .right {
+    text-align: left;
+    font-size: 25px;
+}
+
+.addform .notice {
+    text-align: left;
+    font-size: 18px;
+    color: red;
+}
+
+.addform .notice ul {
+    text-align: left;
+    font-size: 18px;
+    color: red;
+    list-style: none;
+}
+
+
+
+
+.addform  tr td{
+    padding-bottom: 7px;
+}
+
+.pagebox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.pagenumber {
+    display: flex;
+    justify-self: center;
+    border: 1px solid black;
+    padding: 5px 9px;
+    color: #000000;
+}
+
+.popupbox {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    height: auto;
+    width: auto;
+    background: white;
+    border-radius: 20px;
+    position: relative;
+    padding: 15px;
+}
+
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+
+.textinput {
+   font-size: 18px;
+}
+

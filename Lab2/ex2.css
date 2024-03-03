@@ -1,0 +1,34 @@
+.outer{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid brown;
+    background-color: lightyellow;
+}
+img{
+    width: 340px;
+    border: 5px solid orange ;
+    margin-left: 10px;
+}
+p{
+    /**/padding-left: 5px;
+    margin-top: 1px;
+}
+.inner1{ 
+    width: 345px;
+    border: 3px solid orange ;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.inner2{
+    overflow: scroll;
+    width: 330px;
+    height: 220px;
+    border: 3px solid orange ;
+    background-color: #e0ffff ;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    padding-right: 8px;
+}

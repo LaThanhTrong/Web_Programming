@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" type="text/css" id="themeCSS">
+</head>
+<body>
+    <div class="theme">
+        <b><span style="margin-right: 3px;">Select theme:</span></b><span><select id="select" onchange="getTheme()" style="border-radius: 3px;">
+            <option value="default">Default</option>
+            <option value="dark">Dark</option>
+            <option value="colorful">Colorful</option>
+        </select></span>
+    </div>
+    <section class="cal">
+        <div class="form">
+            <form>
+                <input type="text" class="screen">
+            </form>
+        </div>
+        <div class="buttons">
+            <button type="button" class="btn bc-y c-r" data-num="1">1</button>
+            <button type="button" class="btn bc-y c-b" data-num="2">2</button>
+            <button type="button" class="btn bc-y c-r" data-num="3">3</button>
+            <button type="button" class="btn bc-y c-b" data-num="+">+</button>
+
+            <button type="button" class="btn bc-a c-r" data-num="4">4</button>
+            <button type="button" class="btn bc-a c-b" data-num="5">5</button>
+            <button type="button" class="btn bc-a c-r" data-num="6">6</button>
+            <button type="button" class="btn bc-a c-b" data-num="-">-</button>
+
+            <button type="button" class="btn bc-y c-r" data-num="7">7</button>
+            <button type="button" class="btn bc-y c-b" data-num="8">8</button>
+            <button type="button" class="btn bc-y c-r" data-num="9">9</button>
+            <button type="button" class="btn bc-y c-b" data-num="*">x</button>
+            
+            <button type="button" class="clear bc-a c-r">C</button>
+            <button type="button" class="btn bc-a c-b" data-num="0">0</button>
+            <button type="button" class="equal bc-a c-r">=</button>
+            <button type="button" class="btn bc-a c-b" data-num="/">/</button>
+        </div>
+    </section>
+</body>
+    <script src="ex9.js" ></script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Edit Profile-COTC</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img class="logo" src="images/icon/logo.png" alt="">
+            <h2>Octopath Champions of the Continent<span>Wiki-Database</span></h2>
+        </div>
+        <a id="login" href="login.html">Login</a>
+        <img src="images/icon/cat1.png" alt="">
+    </div>
+    <div class="ribbon">
+        <a href="index.html">What's New</a>
+        <div class="submenu-Db">
+            <a class="Db" href="">COTC Databases<span class="material-symbols-outlined">expand_more</span></a>
+            <div class="dropdown-Db">
+                <a href="traveller.html">Traveller Database</a>
+                <a href="accessories.html">Accessories Database</a>
+            </div>
+        </div>
+        <a id="profile" href="login.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <div class="user">
+                <img id="u_image" src="" alt="">
+                <h1 id="u_name"></h1>
+            </div>
+            <div class="user-edit">
+                <h2>User can edit one of these option. If password is presented, then retype password must be required</h2>
+                <h3>Nickname</h3>
+                <input id="editName" type="text" placeholder="Nickname">
+                <h3>Email</h3>
+                <input id="editEmail" type="email" placeholder="Email">
+                <h3>Password</h3>
+                <input id="editPassword" type="password" placeholder="Password">
+                <h3>Retype Password</h3>
+                <input id="editRePassword" type="password" placeholder="Retype Password">
+                <h3>Insert an Image</h3>
+                <input id="editImage" type="file" placeholder="Retype Password"><br>
+                <button id="update" onclick="update();">Update</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const login = document.getElementById('login')
+    const profile = document.getElementById('profile')
+    const user_image = document.getElementById('u_image')
+    const username = document.getElementById('u_name')
+    const editName = document.getElementById('editName')
+    const editEmail = document.getElementById('editEmail')
+    const editPassword = document.getElementById('editPassword')
+    const editRePassword = document.getElementById('editRePassword')
+    if(sessionStorage.getItem('u_email') != null){
+        login.style.display = 'none'
+        profile.href = 'profile.html'
+        user_image.src = './images/users/'+sessionStorage.getItem('u_image')
+        username.innerHTML = sessionStorage.getItem('u_name')
+        editName.value = sessionStorage.getItem('u_name')
+        editEmail.value = sessionStorage.getItem('u_email')
+    }
+</script>
+<script src="js/profile.js"></script>
+</html>

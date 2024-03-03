@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/editTraveller.css">
+    <title>Edit-Traveller_COTC</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img class="logo" src="images/icon/logo.png" alt="">
+            <h2>Octopath Champions of the Continent<span>Wiki-Database</span></h2>
+        </div>
+        <a id="login" href="login.html">Login</a>
+        <img src="images/icon/cat1.png" alt="">
+    </div>
+    <div class="ribbon">
+        <a href="index.html">What's New</a>
+        <div class="submenu-Db">
+            <a class="Db" href="">COTC Databases<span class="material-symbols-outlined">expand_more</span></a>
+            <div class="dropdown-Db">
+                <a href="traveller.html">Traveller Database</a>
+                <a href="accessories.html">Accessories Database</a>
+            </div>
+        </div>
+        <a id="profile" href="login.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="form">
+            <h3>Name</h3>
+            <input id="name" type="text" placeholder="Name">
+            <h3>Rarity</h3>
+            <input id="rarity" type="number" placeholder="Rarity">
+            <h3>Job</h3>
+            <input id="job" type="text" placeholder="Job">
+            <h3>Element</h3>
+            <input id="element" type="text" placeholder="Element">
+            <h3>Role</h3>
+            <textarea id="role" cols="50" rows="5"></textarea>
+            <h3>Total</h3>
+            <input id="total" type="number" placeholder="Total">
+            <h3>Upload Sprite</h3>
+            <input id="image" type="file">
+            <button id="update" onclick="update();">Update</button>
+        </div>
+    </div>
+</body>
+<script>
+    const login = document.getElementById('login')
+    const profile = document.getElementById('profile')
+    if(sessionStorage.getItem('u_email') != null){
+        login.style.display = 'none'
+        profile.href = 'profile.html'
+    }
+</script>
+<script src="js/editTraveller.js"></script>
+</html>

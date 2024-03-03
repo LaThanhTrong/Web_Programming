@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/traveller.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>TravellerDB-COTC</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img class="logo" src="images/icon/logo.png" alt="">
+            <h2>Octopath Champions of the Continent<span>Wiki-Database</span></h2>
+        </div>
+        <a id="login" href="login.html">Login</a>
+        <img src="images/icon/cat1.png" alt="">
+    </div>
+    <div class="ribbon">
+        <a href="index.html">What's New</a>
+        <div class="submenu-Db">
+            <a class="Db" href="">COTC Databases<span class="material-symbols-outlined">expand_more</span></a>
+            <div class="dropdown-Db">
+                <a href="traveller.html">Traveller Database</a>
+                <a href="accessories.html">Accessories Database</a>
+            </div>
+        </div>
+        <a id="profile" href="login.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="tools">
+            <a id="add" href="login.html"><img src="images/icon/add.png" alt="">Add a Traveller</a>
+            <div id="search">
+                <input type="search" id="searchTraveller" placeholder="Search by name..."/>
+                <label for="searchTraveller"><button id="search-button" type="button" onclick="searchTraveller();"><img src="./images/icon/search1.png" alt=""></button></label>
+            </div>
+        </div>
+        <table class="table table-sortable">
+            <colgroup>
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: 150px;">
+                <col span="1" style="width: 150px;">
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: fit-content;">
+                <col span="1" style="width: fit-content;">
+             </colgroup>
+            <thead>
+                <tr>
+                    <th>Sprite</th>
+                    <th class="sort">Name</th>
+                    <th class="sort">Rarity</th>
+                    <th class="sort">Job</th>
+                    <th class="sort">Element</th>
+                    <th class="sort">Role</th>
+                    <th class="sort">Total</th>
+                    <th class="action" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    const login = document.getElementById('login')
+    const profile = document.getElementById('profile')
+    const add = document.getElementById('add')
+    if(sessionStorage.getItem('u_email') != null){
+        login.style.display = 'none'
+        profile.href = 'profile.html'
+        add.href = 'addTraveller.html'
+    }
+</script>
+<script src="js/traveller.js"></script>
+<script>travellerTable();</script>
+</html>

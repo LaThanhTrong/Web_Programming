@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: antiquewhite;
+    
+}
+
+.theme{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    margin-bottom: 30px;
+}
+
+.cal{
+    width: 302px;
+    height: 215px;
+    border-top: 8px solid gray;
+    border-left: 8px solid gray;
+    border-bottom: 8px solid rgb(59, 59, 59);
+    border-right: 8px solid rgb(59, 59, 59);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(68, 111, 255);
+}
+
+.form{
+    border: 1px solid white;
+    background-color: rgb(68, 111, 255);
+    margin: 3px;
+}
+
+form input{
+    width: 85%;
+    height: 40px;
+    padding-left: 5px;
+    margin: 2px;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(3, 211, 3);
+    border: 2px solid white;
+    color: yellow;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid gray;
+    margin: 3px;
+    padding-top: 2px;
+}
+
+button{
+    flex: 0 0 22%;
+    width: 60px;
+    height: 28px;
+    margin: 3px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: gray;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.bc-y{
+    background-color: yellow;
+}
+
+.c-r{
+    color: red;
+}
+
+.bc-a{
+    background-color: aqua;
+}
+
+.c-b{
+    color: blue;
+}

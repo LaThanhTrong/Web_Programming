@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Contact-COTC</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img class="logo" src="images/icon/logo.png" alt="">
+            <h2>Octopath Champions of the Continent<span>Wiki-Database</span></h2>
+        </div>
+        <a id="login" href="login.html">Login</a>
+        <img src="images/icon/cat1.png" alt="">
+    </div>
+    <div class="ribbon">
+        <a href="index.html">What's New</a>
+        <div class="submenu-Db">
+            <a class="Db" href="">COTC Databases<span class="material-symbols-outlined">expand_more</span></a>
+            <div class="dropdown-Db">
+                <a href="traveller.html">Traveller Database</a>
+                <a href="accessories.html">Accessories Database</a>
+            </div>
+        </div>
+        <a id="profile" href="login.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <h1>Contact</h1>
+        <h3>Reach me on Discord: Aile Alana#2048</h3>
+        <h3>Want to contribute to the site? Spot a bug? Or are you a content creator? Contact me!</h3>
+        <div class="form-contact">
+            <div>
+                <h3>Your Email</h3>
+                <input id="contactEmail" type="text" placeholder="Your Email">
+                <h3>Your Message</h3>
+                <textarea name="" id="contactMessage" cols="50" rows="5" placeholder="Your Message"></textarea>
+                <button onclick="send();">Send Message</button>
+            </div>
+            <div style="align-self: flex-end; margin-left: 20px;">
+                <img src="./images/icon/cat2.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const login = document.getElementById('login')
+    const profile = document.getElementById('profile')
+    if(sessionStorage.getItem('u_email') != null){
+        login.style.display = 'none'
+        profile.href = 'profile.html'
+    }
+</script>
+<script src="js/contact.js"></script>
+</html>
